@@ -1,0 +1,11 @@
+stages:
+  - master
+
+# upload job, see https://lftp.yar.ru/lftp-man.html
+main:
+  stage: master
+  script:
+    - apt-get update -qq && apt-get install -y -qq lftp
+    - lftp -c "set ftp:ssl-allow no; open -u Username,Password Host; mirror -Rnev  --ignore-time --parallel=10 --exclude-glob .git* --exclude .git/  "
+  only:
+    - master
