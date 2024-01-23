@@ -18,12 +18,12 @@
 
 <div class="card">
     <div class="card-body">
-           
+
         <h2>Master Data Guru PNS</h2>
         <div class="col-lg-2">
             <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#tambah">Tambah Gaji Guru ASN</button>
-        </div>   
-        <hr>    
+        </div>
+        <hr>
         <table id="datatable-buttons" class="table table-striped dt-responsive nowrap w-100 mt-2 px-2">
             <thead class="table-dark">
                 <tr class="text-center">
@@ -33,8 +33,8 @@
                     <th>Aksi</th>
                 </tr>
             </thead>
-        
-        
+
+
             <tbody>
                 @foreach ($guru as $g)
                 <tr class="text-center">
@@ -98,17 +98,17 @@
                             <div class="row">
                                 <div class="mb-3">
                                     <label for="gaji_asn" class="form-label">Gaji</label>
-                                    <input type="text" class="form-control @error('gaji_asn') is-invalid @enderror" id="gaji_asn" 
+                                    <input type="text" class="form-control @error('gaji_asn') is-invalid @enderror" id="gaji_asn"
                                     name="gaji_asn"  required autofocus>
                                     <span id="nama-jabatanError" class="alert-message"></span>
                                     @error('gaji_asn')
                                       <div class="invalid-feedback">
                                           {{ $message }}
-                                      </div>    
+                                      </div>
                                     @enderror
                                 </div>
-                                     
-                    
+
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>

@@ -70,7 +70,8 @@
                                         <a href="/forget-password" class="text-muted float-end">
                                             <small>Forgot your password?</small></a>
                                         
-                                        <label for="password" class="form-label">Password</label>
+                              
+                                        <p>Password</p>
                                         <div class="input-group input-group-merge">
                                             <input type="password" id="password" class="form-control" @error('password') is-invalid @enderror name="password" required autocomplete="current-password" placeholder="Enter your password">
                                             @error('password')
